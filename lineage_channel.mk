@@ -21,11 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_go_phone.mk)
 
 # GApps
 $(call inherit-product, vendor/partner_gms/products/gms_go.mk)
-BUILD_GMS=yes
 
 # Inherit from channel device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -45,3 +44,4 @@ BUILD_FINGERPRINT := motorola/channel_retail/channel:9/PPY29.148-140/687ae:user/
 
 # LOS-Modded
 TARGET_MOTOCAM3_SUPPORTED := false
+TARGET_USES_PIXEL_WALLPAPERS := false
